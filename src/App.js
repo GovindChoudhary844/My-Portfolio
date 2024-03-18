@@ -9,7 +9,7 @@ function App() {
     <div className="background-image-container">
       <Container fluid>
         <Row className="p-5">
-          <Col md={3} className="rounded-5">
+          <Col sm={12} md={3} className="rounded-5">
             <ProfileSidebar />
           </Col>
           <Col md={8}></Col>

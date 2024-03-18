@@ -21,7 +21,6 @@ function ProfileSidebar() {
             background-color: rgb(220, 220, 220); 
             border-radius: 15px;
             transition: 0.5s;
-            // display: flex;
 
           }
           .bg-github:hover {
@@ -55,8 +54,6 @@ function ProfileSidebar() {
             color: #fff;
           }
 
-          
-
           .bg-linkedin {
             background-color: rgb(220, 220, 220); 
             border-radius: 15px;
@@ -78,14 +75,23 @@ function ProfileSidebar() {
             color: #fff;
           }
           
+          .icon {
+            transition: transform 0.5s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
           
+          .icon i:hover{
+            transform: scale(1.1);
+          }
         `}
       </style>
       <Container
         className="rounded-5"
         style={{
           backgroundColor: "white",
-          height: "100vh",
+          height: "80vh",
           marginTop: "50px",
         }}
       >
@@ -150,8 +156,8 @@ function ProfileSidebar() {
                     >
                       <ListGroup.Item>
                         <Row>
-                          <Col md={2}>
-                            <i class="fa-solid fa-phone"></i>
+                          <Col md={2} className="icon">
+                            <i className="fa-solid fa-phone"></i>
                           </Col>
                           <Col>
                             <span
@@ -173,8 +179,8 @@ function ProfileSidebar() {
                       </ListGroup.Item>
                       <ListGroup.Item>
                         <Row>
-                          <Col md={2}>
-                            <i class="fa-solid fa-phone"></i>
+                          <Col md={2} className="icon">
+                            <i className="fa-solid fa-envelope"></i>
                           </Col>
                           <Col>
                             <span
@@ -200,18 +206,18 @@ function ProfileSidebar() {
                       </ListGroup.Item>
                       <ListGroup.Item>
                         <Row>
-                          <Col md={2}>
-                            <i class="fa-solid fa-phone"></i>
+                          <Col md={2} className="icon">
+                            <i className="fa-solid fa-phone"></i>
                           </Col>
                           <Col>
                             <span
                               className="text-muted"
                               style={{ fontSize: "13px" }}
                             >
-                              Phone
+                              Address
                             </span>
                             <br />
-                            In Stock
+                            New Delhi, Delhi
                           </Col>
                         </Row>
                       </ListGroup.Item>
@@ -220,12 +226,8 @@ function ProfileSidebar() {
                 </Col>
               </Row>
               <Row>
-                <Col>
-                  <Button
-                    variant="primary"
-                    href="/path/to/your/cv.pdf"
-                    download
-                  >
+                <Col className="d-flex justify-content-center align-items-center mb-4">
+                  <Button variant="primary" href="#" download>
                     Download CV
                   </Button>
                 </Col>
