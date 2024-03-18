@@ -85,9 +85,48 @@ function ProfileSidebar() {
           .icon i:hover{
             transform: scale(1.1);
           }
+
+          @media (max-width: 575.98px) {
+            .profile-image {
+              margin-top: 40px;
+              margin-bottom: 10px;
+            }
+            .profile-feild{
+              width: 80% !important;
+            }
+            .my-email{
+              font-size: 11px !important;
+            }
+          }
+          
+          /* Styles for screens between 576px and 767.98px (small devices) */
+          @media (min-width: 576px) and (max-width: 767.98px) {
+            .profile-image {
+              margin-top: 40px;
+              margin-bottom: 10px;
+            }
+            .profile-feild{
+              width: 80% !important;
+            }
+            .my-email{
+              font-size: 11px !important;
+            }
+          }
+          @media (min-width: 768px) and (max-width: 991.98px) {
+            .profile-image {
+              margin-top: 40px;
+              margin-bottom: 10px;
+            }
+            .profile-feild{
+              width: 30% !important;
+            }
+            .my-email{
+              font-size: 11px !important;
+            }
+          }
         `}
       </style>
-      <Container
+      <div
         className="rounded-5"
         style={{
           backgroundColor: "white",
@@ -97,11 +136,11 @@ function ProfileSidebar() {
       >
         <Row>
           <Col style={{ backgroundColor: "white" }} className="rounded-5">
-            <Container className="contact-section">
+            <Container fluid className="contact-section">
               <span className="profile-image-span">
                 <img
                   src="Images/photo.jpg"
-                  alt="photo"
+                  alt="profile"
                   width={200}
                   className="profile-image rounded-5"
                 />
@@ -109,7 +148,7 @@ function ProfileSidebar() {
               <h3 className="text-center my-3">Govind Choudhary</h3>
               <span className="d-flex justify-content-center align-items-center">
                 <p
-                  className="text-center d-flex justify-content-center align-items-center"
+                  className="text-center d-flex justify-content-center align-items-center profile-feild"
                   style={{
                     width: "50%",
                     backgroundColor: "#DCDCDC",
@@ -117,28 +156,24 @@ function ProfileSidebar() {
                     height: "35px",
                   }}
                 >
-                  <strong>Web Developer</strong>
+                  <strong className="p-1">Web Developer</strong>
                 </p>
               </span>
 
-              <Row className="social-icons my-4 ">
-                <Col className="d-flex justify-content-center align-items-center">
+              <Row className="social-icons my-4 d-flex ">
+                <Col className="d-flex justify-content-center gap-2">
                   <a href="#" className="bg-github">
                     <i
                       className="fa-brands fa-github p-3"
                       style={{ fontSize: "1.5em" }}
                     ></i>
                   </a>
-                </Col>
-                <Col className="d-flex justify-content-center">
                   <a href="#" className="bg-twitter">
                     <i
                       className="fa-brands fa-twitter p-3"
                       style={{ fontSize: "1.5em" }}
                     ></i>
                   </a>
-                </Col>
-                <Col className="d-flex justify-content-center">
                   <a href="#" className="bg-linkedin">
                     <i
                       className="fa-brands fa-linkedin-in p-3"
@@ -156,7 +191,7 @@ function ProfileSidebar() {
                     >
                       <ListGroup.Item>
                         <Row>
-                          <Col md={2} className="icon">
+                          <Col xs={2} sm={2} md={2} className="icon">
                             <i className="fa-solid fa-phone"></i>
                           </Col>
                           <Col>
@@ -179,7 +214,7 @@ function ProfileSidebar() {
                       </ListGroup.Item>
                       <ListGroup.Item>
                         <Row>
-                          <Col md={2} className="icon">
+                          <Col xs={2} sm={2} md={2} className="icon">
                             <i className="fa-solid fa-envelope"></i>
                           </Col>
                           <Col>
@@ -193,6 +228,7 @@ function ProfileSidebar() {
                             <span style={{ fontSize: "13px" }}>
                               <a
                                 href="mailto:govindchoudhary844@gmail.com"
+                                className="my-email"
                                 style={{
                                   fontSize: "13px",
                                   textDecoration: "none",
@@ -206,8 +242,8 @@ function ProfileSidebar() {
                       </ListGroup.Item>
                       <ListGroup.Item>
                         <Row>
-                          <Col md={2} className="icon">
-                            <i class="fa-solid fa-location-dot"></i>
+                          <Col xs={2} sm={2} md={2} className="icon">
+                            <i className="fa-solid fa-location-dot"></i>
                           </Col>
                           <Col>
                             <span
@@ -235,7 +271,7 @@ function ProfileSidebar() {
             </Container>
           </Col>
         </Row>
-      </Container>
+      </div>
     </>
   );
 }
