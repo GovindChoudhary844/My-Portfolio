@@ -1,22 +1,21 @@
-import logo from "./logo.svg";
+// App.js
+import React from "react";
 import "./App.css";
+import { Container, Row, Col } from "react-bootstrap";
+import ProfileSidebar from "./Components/ProfileSidebar";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="background-image-container">
+      <Container fluid>
+        <Row className="p-5">
+          <Col md={3} className="rounded-5">
+            <ProfileSidebar />
+          </Col>
+          <Col md={8}></Col>
+          <Col md={1}></Col>
+        </Row>
+      </Container>
     </div>
   );
 }
