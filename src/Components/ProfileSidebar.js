@@ -263,7 +263,11 @@ function ProfileSidebar() {
               </Row>
               <Row>
                 <Col className="d-flex justify-content-center align-items-center mb-4">
-                  <Button variant="primary" href="#" download>
+                  <Button
+                    variant="primary"
+                    href="https://drive.google.com/file/d/1w0aH_c1uko22L5h5m1qhb9Ilzdo8v9Y4/view?usp=sharing"
+                    download
+                  >
                     Download CV
                   </Button>
                 </Col>
