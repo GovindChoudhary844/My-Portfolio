@@ -207,7 +207,7 @@ function ProfileSidebar() {
                       <ListGroup.Item>
                         <Row>
                           <Col md={2} className="icon">
-                            <i className="fa-solid fa-phone"></i>
+                            <i class="fa-solid fa-location-dot"></i>
                           </Col>
                           <Col>
                             <span
