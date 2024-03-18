@@ -101,6 +101,20 @@ function ProfileSidebar() {
                 />
               </span>
               <h3 className="text-center my-3">Govind Choudhary</h3>
+              <span className="d-flex justify-content-center align-items-center">
+                <p
+                  className="text-center d-flex justify-content-center align-items-center"
+                  style={{
+                    width: "50%",
+                    backgroundColor: "#DCDCDC",
+                    borderRadius: "10px",
+                    height: "35px",
+                  }}
+                >
+                  <strong>Web Developer</strong>
+                </p>
+              </span>
+
               <Row className="social-icons my-4 ">
                 <Col className="d-flex justify-content-center align-items-center">
                   <a href="#" className="bg-github">
@@ -136,8 +150,17 @@ function ProfileSidebar() {
                     >
                       <ListGroup.Item>
                         <Row>
-                          <Col>Phone Number:</Col>
+                          <Col md={2}>
+                            <i class="fa-solid fa-phone"></i>
+                          </Col>
                           <Col>
+                            <span
+                              className="text-muted"
+                              style={{ fontSize: "13px" }}
+                            >
+                              Phone
+                            </span>
+                            <br />
                             <a
                               href="tel:+91 8595677844"
                               style={{ textDecoration: "none" }}
@@ -150,14 +173,46 @@ function ProfileSidebar() {
                       </ListGroup.Item>
                       <ListGroup.Item>
                         <Row>
-                          <Col>Status:</Col>
-                          <Col>In Stock</Col>
+                          <Col md={2}>
+                            <i class="fa-solid fa-phone"></i>
+                          </Col>
+                          <Col>
+                            <span
+                              className="text-muted"
+                              style={{ fontSize: "13px" }}
+                            >
+                              Email
+                            </span>
+                            <br />
+                            <span style={{ fontSize: "13px" }}>
+                              <a
+                                href="mailto:govindchoudhary844@gmail.com"
+                                style={{
+                                  fontSize: "13px",
+                                  textDecoration: "none",
+                                }}
+                              >
+                                govindchoudhary844@gmail.com
+                              </a>
+                            </span>
+                          </Col>
                         </Row>
                       </ListGroup.Item>
                       <ListGroup.Item>
                         <Row>
-                          <Col>Address:</Col>
-                          <Col className="my-1">123 Street, City, Country</Col>
+                          <Col md={2}>
+                            <i class="fa-solid fa-phone"></i>
+                          </Col>
+                          <Col>
+                            <span
+                              className="text-muted"
+                              style={{ fontSize: "13px" }}
+                            >
+                              Phone
+                            </span>
+                            <br />
+                            In Stock
+                          </Col>
                         </Row>
                       </ListGroup.Item>
                     </ListGroup>
