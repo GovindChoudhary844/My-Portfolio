@@ -16,7 +16,7 @@ function App() {
     <Router>
       <div className="background-image-container">
         <Topmenu />
-        <Row className="p-5">
+        <Row className="p-lg-5 p-md-5 px-4">
           <Col sm={12} md={12} lg={3}>
             <ProfileSidebar />
           </Col>
