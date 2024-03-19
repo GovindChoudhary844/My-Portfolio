@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Container, Row, Col } from "react-bootstrap";
 import ProfileSidebar from "./Components/ProfileSidebar";
+import Topmenu from "./Components/Topmenu";
 import Navbar from "./Components/Navbar";
 import About from "./Screens/About";
 import Resume from "./Screens/Resume";
@@ -14,11 +15,17 @@ function App() {
   return (
     <Router>
       <div className="background-image-container">
+        <Topmenu />
         <Row className="p-5">
-          <Col sm={12} md={12} lg={3} className="rounded-5">
+          <Col sm={12} md={12} lg={3}>
             <ProfileSidebar />
           </Col>
-          <Col md={8}>
+          <Col
+            sm={12}
+            md={12}
+            lg={7}
+            className="bg-light rounded-3 m-lg-5 p-5 mt-5"
+          >
             <Routes>
               <Route path="/about" element={<About />} />
               <Route path="/resume" element={<Resume />} />
@@ -27,7 +34,7 @@ function App() {
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </Col>
-          <Col md={1}>
+          <Col sm={12} md={12} lg={1} className="mt-5">
             <Navbar />
           </Col>
         </Row>
