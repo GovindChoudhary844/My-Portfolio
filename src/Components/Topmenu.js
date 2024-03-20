@@ -73,7 +73,7 @@ function Topmenu() {
           }
           
         }
-        @media (min-width: 575.98px) and (max-width: 1200px) {
+        @media (max-width: 1200px) {
           .top-menu-button {
             display: block;
           }
