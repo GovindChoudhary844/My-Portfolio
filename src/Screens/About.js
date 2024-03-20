@@ -1,8 +1,12 @@
+// About.js
 import React from "react";
 
 const About = () => {
   return (
-    <>
+    <div
+      className="rounded-3 p-5"
+      style={{ height: "100vh", backgroundColor: "white" }}
+    >
       <style>
         {`
           .page-title:after {
@@ -18,7 +22,7 @@ const About = () => {
         `}
       </style>
       <h1 className="page-title">About</h1>
-    </>
+    </div>
   );
 };
 

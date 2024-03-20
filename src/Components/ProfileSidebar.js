@@ -95,7 +95,7 @@ function ProfileSidebar() {
               width: 80% !important;
             }
             .my-email{
-              font-size: 11px !important;
+              font-size: 13px !important;
             }
           }
           
@@ -109,7 +109,7 @@ function ProfileSidebar() {
               width: 80% !important;
             }
             .my-email{
-              font-size: 11px !important;
+              font-size: 13px !important;
             }
           }
           @media (min-width: 768px) and (max-width: 991.98px) {
@@ -121,19 +121,15 @@ function ProfileSidebar() {
               width: 30% !important;
             }
             .my-email{
-              font-size: 11px !important;
+              font-size: 13px !important;
             }
           }
         `}
       </style>
-      <div
-        style={{
-          marginTop: "50px",
-        }}
-      >
+      <div>
         <Row>
-          <Col style={{ backgroundColor: "white" }} className="rounded-3">
-            <Container fluid className="contact-section">
+          <Col>
+            <div className="rounded-3 p-3" style={{ backgroundColor: "white" }}>
               <span className="profile-image-span">
                 <img
                   src="Images/photo.jpg"
@@ -269,7 +265,7 @@ function ProfileSidebar() {
                   </Button>
                 </Col>
               </Row>
-            </Container>
+            </div>
           </Col>
         </Row>
       </div>

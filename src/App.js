@@ -1,3 +1,4 @@
+// App.js
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
@@ -13,33 +14,39 @@ import Contact from "./Screens/Contact";
 
 function App() {
   return (
-    <Router>
-      <div className="background-image-container">
-        <Topmenu />
-        <Row className="p-lg-5 p-md-5 px-4">
-          <Col sm={12} md={12} lg={3}>
-            <ProfileSidebar />
-          </Col>
-          <Col
-            sm={12}
-            md={12}
-            lg={7}
-            className="bg-light rounded-3 m-lg-5 p-5 mt-5"
-          >
-            <Routes>
-              <Route path="/about" element={<About />} />
-              <Route path="/resume" element={<Resume />} />
-              <Route path="/works" element={<Works />} />
-              <Route path="/blogs" element={<Blogs />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </Col>
-          <Col sm={12} md={12} lg={1} className="mt-5">
-            <Navbar />
-          </Col>
-        </Row>
-      </div>
-    </Router>
+    <>
+      <style>
+        {`
+        .content{
+          padding-left: 15px;
+          padding-right: 15px;
+          margin-top: 8%;
+        }
+      `}
+      </style>
+      <Router>
+        <Container fluid className="background-image-container">
+          <Topmenu />
+          <Row className="content">
+            <Col sm={12} md={12} lg={4} xl={3}>
+              <ProfileSidebar />
+            </Col>
+            <Col sm={12} md={12} lg={8} xl={8}>
+              <Routes>
+                <Route path="/about" element={<About />} />
+                <Route path="/resume" element={<Resume />} />
+                <Route path="/works" element={<Works />} />
+                <Route path="/blogs" element={<Blogs />} />
+                <Route path="/contact" element={<Contact />} />
+              </Routes>
+            </Col>
+            <Col sm={12} md={12} xl={1}>
+              <Navbar />
+            </Col>
+          </Row>
+        </Container>
+      </Router>
+    </>
   );
 }
 

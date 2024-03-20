@@ -1,3 +1,4 @@
+// Topmenu.js
 import React, { useState } from "react";
 import { Container, Row, Col, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -9,24 +10,36 @@ function Topmenu() {
     setMenuVisible(!menuVisible);
   };
 
+  const closeMenu = () => {
+    setMenuVisible(false);
+  };
+
   return (
     <>
       <style>
         {`
-        .top-menu-button {
+        .top-mode-button {
           border-radius: 50%;
           padding: 10px;
           background: #f2f2f2;
           box-shadow: -10px 10px 9px #929292, 10px -10px 9px #ffffff;
         }
+        .top-menu-button {
+          border-radius: 50%;
+          padding: 10px;
+          background: #f2f2f2;
+          box-shadow: -10px 10px 9px #929292, 10px -10px 9px #ffffff;
+          display: none; 
+        }
+        
+        
+
         .name-logo {
           width: 200px;
         }
 
         .top-navlink-button {
           color: black;
-          padding: 10px;
-          padding-left: 25px;
         }
         .top-navlink-button:hover {
           color: blue;
@@ -42,7 +55,13 @@ function Topmenu() {
         .menu-container {
           opacity: ${menuVisible ? "1" : "0"};
           visibility: ${menuVisible ? "visible" : "hidden"};
-          transition: 0.5s, visibility 0.5s;
+          transition: opacity 0.5s, visibility 0.5s;
+          position: absolute;
+          z-index: 1000;
+          background-color: white;
+          border-radius: 10px;
+          padding: 10px;
+          box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
         }
 
         @media (max-width: 767.98px) {
@@ -51,6 +70,12 @@ function Topmenu() {
           }
           .name-logo {
             width: 150px !important;
+          }
+          
+        }
+        @media (min-width: 575.98px) and (max-width: 1200px) {
+          .top-menu-button {
+            display: block;
           }
         }
         `}
@@ -71,10 +96,10 @@ function Topmenu() {
               md={6}
               className="d-flex align-items-center justify-content-end"
             >
-              <div className="top-menu-button mx-3">
+              <div className="top-mode-button mx-3">
                 <i className="fa-solid fa-moon-stars fa-2x"></i>
               </div>
-              <div className="top-menu-button mx-3" onClick={toggleMenu}>
+              <div className="top-menu-button" onClick={toggleMenu}>
                 <i className="fa-solid fa-bars fa-2x"></i>
               </div>
             </Col>
@@ -82,63 +107,73 @@ function Topmenu() {
         </Container>
         {/* menu Item */}
         {menuVisible && (
-          <Container fluid className="position-absolute z-3 menu-container">
-            <Row className="bg-light rounded-3" style={{ width: "100%" }}>
-              <Col sm={12} md={12}>
-                <Nav className="flex-column">
-                  <Nav.Link
-                    as={Link}
-                    to="/about"
-                    className="top-navlink-button"
-                  >
-                    <span>
-                      <i className="fa-light fa-user top-navlink-button-icon"></i>
-                    </span>
-                    About
-                  </Nav.Link>
-                  <Nav.Link
-                    as={Link}
-                    to="/resume"
-                    className="top-navlink-button"
-                  >
-                    <span>
-                      <i className="fa-light fa-file-lines top-navlink-button-icon"></i>
-                    </span>
-                    Resume
-                  </Nav.Link>
-                  <Nav.Link
-                    as={Link}
-                    to="/works"
-                    className="top-navlink-button"
-                  >
-                    <span>
-                      <i className="fa-light fa-briefcase top-navlink-button-icon"></i>
-                    </span>
-                    Works
-                  </Nav.Link>
-                  <Nav.Link
-                    as={Link}
-                    to="/blogs"
-                    className="top-navlink-button"
-                  >
-                    <span>
-                      <i className="fa-regular fa-blog top-navlink-button-icon"></i>
-                    </span>
-                    Blogs
-                  </Nav.Link>
-                  <Nav.Link
-                    as={Link}
-                    to="/contact"
-                    className="top-navlink-button"
-                  >
-                    <span>
-                      <i className="size-22 fa-light fa-address-book top-navlink-button-icon"></i>
-                    </span>
-                    Contact
-                  </Nav.Link>
-                </Nav>
-              </Col>
-            </Row>
+          <Container fluid className="position-relative">
+            <div
+              className="menu-container"
+              style={{ width: "100%", marginLeft: "-12px" }}
+            >
+              <Row className="rounded-3">
+                <Col sm={12} md={12}>
+                  <Nav className="flex-column">
+                    <Nav.Link
+                      as={Link}
+                      to="/about"
+                      className="top-navlink-button"
+                      onClick={closeMenu}
+                    >
+                      <span>
+                        <i className="fa-light fa-user top-navlink-button-icon"></i>
+                      </span>
+                      About
+                    </Nav.Link>
+                    <Nav.Link
+                      as={Link}
+                      to="/resume"
+                      className="top-navlink-button"
+                      onClick={closeMenu}
+                    >
+                      <span>
+                        <i className="fa-light fa-file-lines top-navlink-button-icon"></i>
+                      </span>
+                      Resume
+                    </Nav.Link>
+                    <Nav.Link
+                      as={Link}
+                      to="/works"
+                      className="top-navlink-button"
+                      onClick={closeMenu}
+                    >
+                      <span>
+                        <i className="fa-light fa-briefcase top-navlink-button-icon"></i>
+                      </span>
+                      Works
+                    </Nav.Link>
+                    <Nav.Link
+                      as={Link}
+                      to="/blogs"
+                      className="top-navlink-button"
+                      onClick={closeMenu}
+                    >
+                      <span>
+                        <i className="fa-regular fa-blog top-navlink-button-icon"></i>
+                      </span>
+                      Blogs
+                    </Nav.Link>
+                    <Nav.Link
+                      as={Link}
+                      to="/contact"
+                      className="top-navlink-button"
+                      onClick={closeMenu}
+                    >
+                      <span>
+                        <i className="size-22 fa-light fa-address-book top-navlink-button-icon"></i>
+                      </span>
+                      Contact
+                    </Nav.Link>
+                  </Nav>
+                </Col>
+              </Row>
+            </div>
           </Container>
         )}
       </Container>
