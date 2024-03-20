@@ -33,6 +33,7 @@ function App() {
             </Col>
             <Col sm={12} md={12} lg={8} xl={8} className="my-5 my-md-0 my-lg-0">
               <Routes>
+                <Route path="/" element={<About />} />
                 <Route path="/about" element={<About />} />
                 <Route path="/resume" element={<Resume />} />
                 <Route path="/works" element={<Works />} />
