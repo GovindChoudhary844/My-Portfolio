@@ -60,7 +60,10 @@ const Navbar = () => {
             </Nav.Link>
             <Nav.Link as={Link} to="/blogs" className="navlink-button">
               <span>
-                <i class="fa-regular fa-blog" style={{ fontSize: "25px" }}></i>
+                <i
+                  className="fa-regular fa-blog"
+                  style={{ fontSize: "25px" }}
+                ></i>
                 <br />
               </span>
               Blogs

@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 .background-image-container {
   background-image: url("../public/Images/page-bg-1.jpg");
   background-size: cover;
