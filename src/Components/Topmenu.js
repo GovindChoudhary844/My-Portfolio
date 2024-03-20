@@ -19,13 +19,13 @@ function Topmenu() {
       <style>
         {`
         .top-mode-button {
-          border-radius: 50%;
+          border-radius: 20%;
           padding: 10px;
           background: #f2f2f2;
           box-shadow: -10px 10px 9px #929292, 10px -10px 9px #ffffff;
         }
         .top-menu-button {
-          border-radius: 50%;
+          border-radius: 20%;
           padding: 10px;
           background: #f2f2f2;
           box-shadow: -10px 10px 9px #929292, 10px -10px 9px #ffffff;
