@@ -86,6 +86,15 @@ function ProfileSidebar() {
             transform: scale(1.1);
           }
 
+          .button-desc{
+            background-color: white;
+            color: black;
+          }
+          .button-desc:hover {
+            background-color: blue;
+            color: white;
+          }
+
           @media (max-width: 575.98px) {
             .profile-image {
               margin-top: 40px;
@@ -98,6 +107,11 @@ function ProfileSidebar() {
               font-size: 13px !important;
             }
           }
+          p {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 27px;
+        }
           
           /* Styles for screens between 576px and 767.98px (small devices) */
           @media (min-width: 576px) and (max-width: 767.98px) {
@@ -175,17 +189,19 @@ function ProfileSidebar() {
                   </a>
                 </Col>
               </Row>
-              <Row className="my-3 mt-5">
+              <Row className="my-3 mt-5 px-md-5">
                 <Col>
                   <Card className="rounded-5 bg-blue">
                     <ListGroup
                       variant="flush"
                       className="rounded-5 profile-sidebar-content"
                     >
-                      <ListGroup.Item>
+                      <ListGroup.Item className="bg-gray">
                         <Row>
                           <Col xs={2} sm={2} md={2} className="icon">
-                            <i className="fa-solid fa-phone"></i>
+                            <Button className="button-desc">
+                              <i className="fa-solid fa-phone"></i>
+                            </Button>
                           </Col>
                           <Col>
                             <span
@@ -205,10 +221,12 @@ function ProfileSidebar() {
                           </Col>
                         </Row>
                       </ListGroup.Item>
-                      <ListGroup.Item>
+                      <ListGroup.Item className="bg-gray">
                         <Row>
                           <Col xs={2} sm={2} md={2} className="icon">
-                            <i className="fa-solid fa-envelope"></i>
+                            <Button className="button-desc">
+                              <i className="fa-solid fa-envelope"></i>
+                            </Button>
                           </Col>
                           <Col>
                             <span
@@ -233,10 +251,12 @@ function ProfileSidebar() {
                           </Col>
                         </Row>
                       </ListGroup.Item>
-                      <ListGroup.Item>
+                      <ListGroup.Item className="bg-gray">
                         <Row>
                           <Col xs={2} sm={2} md={2} className="icon">
-                            <i className="fa-solid fa-location-dot"></i>
+                            <Button className="button-desc">
+                              <i className="fa-solid fa-location-dot"></i>
+                            </Button>
                           </Col>
                           <Col>
                             <span

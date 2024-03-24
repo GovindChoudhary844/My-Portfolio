@@ -82,7 +82,7 @@ function Topmenu() {
       </style>
       <Container fluid>
         <Container>
-          <Row className="top-navbar" style={{ height: "30vh" }}>
+          <Row className="top-navbar" style={{ height: "20vh" }}>
             <Col xs={6} sm={6} md={6} className="d-flex align-items-center">
               <img
                 src="Images\top-logo.png"

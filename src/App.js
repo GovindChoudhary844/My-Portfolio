@@ -22,16 +22,34 @@ function App() {
           padding-right: 15px;
           margin-top: 8%;
         }
+
+        @media (min-width: 768px) and (max-width: 991.98px){
+          .content{
+            padding-left: 10%;
+            padding-right: 10%;
+          }
+          .pages{
+          margin-top: 2em !important;
+        }
+
+        } 
       `}
       </style>
       <Router>
         <Container fluid className="background-image-container">
           <Topmenu />
-          <Row className="content">
+          <Row className="content  pb-5">
             <Col sm={12} md={12} lg={4} xl={3}>
               <ProfileSidebar />
             </Col>
-            <Col sm={12} md={12} lg={8} xl={8} className="my-5 my-md-0 my-lg-0">
+            {/* ====================== */}
+            <Col
+              sm={12}
+              md={12}
+              lg={8}
+              xl={8}
+              className="my-5 my-md-0 my-lg-0 pages"
+            >
               <Routes>
                 <Route path="/" element={<About />} />
                 <Route path="/about" element={<About />} />
@@ -41,6 +59,7 @@ function App() {
                 <Route path="/contact" element={<Contact />} />
               </Routes>
             </Col>
+            {/* ====================== */}
             <Col sm={12} md={12} xl={1}>
               <Navbar />
             </Col>
