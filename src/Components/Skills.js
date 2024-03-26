@@ -1,5 +1,6 @@
 import React from "react";
 import { Col, Button } from "react-bootstrap";
+import "../App.css";
 
 function Skills() {
   return (
@@ -20,19 +21,19 @@ function Skills() {
       `}
       </style>
       <Col>
-        <Button className="Skills-button">HTML</Button>
-        <Button className="Skills-button">CSS</Button>
-        <Button className="Skills-button">JavaScript</Button>
-        <Button className="Skills-button">Bootstrap</Button>
-        <Button className="Skills-button">Python</Button>
-        <Button className="Skills-button">Django</Button>
-        <Button className="Skills-button">ReactJs</Button>
-        <Button className="Skills-button">ReactJs-Bootstarp</Button>
-        <Button className="Skills-button">MySql</Button>
-        <Button className="Skills-button">WordPress</Button>
-        <Button className="Skills-button">Photoshop</Button>
-        <Button className="Skills-button">ChatGPT</Button>
-        <Button className="Skills-button">GitHub</Button>
+        <Button className="Skills-button resp-text">HTML</Button>
+        <Button className="Skills-button resp-text">CSS</Button>
+        <Button className="Skills-button resp-text">JavaScript</Button>
+        <Button className="Skills-button resp-text">Bootstrap</Button>
+        <Button className="Skills-button resp-text">Python</Button>
+        <Button className="Skills-button resp-text">Django</Button>
+        <Button className="Skills-button resp-text">ReactJs</Button>
+        <Button className="Skills-button resp-text">ReactJs-Bootstarp</Button>
+        <Button className="Skills-button resp-text">MySql</Button>
+        <Button className="Skills-button resp-text">WordPress</Button>
+        <Button className="Skills-button resp-text">Photoshop</Button>
+        <Button className="Skills-button resp-text">ChatGPT</Button>
+        <Button className="Skills-button resp-text">GitHub</Button>
       </Col>
     </>
   );

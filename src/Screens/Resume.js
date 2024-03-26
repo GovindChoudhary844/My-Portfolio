@@ -47,7 +47,7 @@ const Resume = () => {
       </style>
       <div className="rounded-3 p-5" style={{ backgroundColor: "white" }}>
         <h1 className="page-title resp-h1">Resume</h1>
-        <h2 className="mt-5">Profile</h2>
+        <h2 className="mt-5 resp-h2">Profile</h2>
         <hr />
         <p className="resp-text">
           Dedicated web developer equipped with a strong grasp of HTML, CSS, and

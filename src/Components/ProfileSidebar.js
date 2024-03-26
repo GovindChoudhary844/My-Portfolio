@@ -104,9 +104,6 @@ function ProfileSidebar() {
             .profile-feild{
               width: 80% !important;
             }
-            .my-email{
-              font-size: 11px !important;
-            }
           }
 
           .profile-name {
@@ -126,9 +123,6 @@ function ProfileSidebar() {
             .profile-feild{
               width: 80% !important;
             }
-            .my-email{
-              font-size: 13px !important;
-            }
           }
           @media (min-width: 768px) and (max-width: 991.98px) {
             .profile-image {
@@ -137,9 +131,6 @@ function ProfileSidebar() {
             }
             .profile-feild{
               width: 30% !important;
-            }
-            .my-email{
-              font-size: 13px !important;
             }
           }
         `}
@@ -156,7 +147,7 @@ function ProfileSidebar() {
                   className="profile-image rounded-5"
                 />
               </span>
-              <h3 className="text-center my-3 profile-name resp-h1">
+              <h3 className="text-center my-3 profile-name resp-h2">
                 Govind Choudhary
               </h3>
               <span className="d-flex justify-content-center align-items-center">
@@ -209,24 +200,23 @@ function ProfileSidebar() {
                               <i className="fa-solid fa-phone"></i>
                             </Button>
                           </Col>
-                          <Col>
-                            <span
-                              className="text-muted"
-                              style={{ fontSize: "13px" }}
-                            >
-                              Phone
-                            </span>
+                          <Col xs={10} sm={10} md={10}>
+                            <span className="text-muted resp-text">Phone</span>
                             <br />
-                            <a
-                              href="tel:+91 8595677844"
-                              style={{ textDecoration: "none" }}
-                            >
-                              {" "}
-                              8595677844
-                            </a>
+                            <span>
+                              <a
+                                className="resp-h5"
+                                href="tel:+91 8595677844"
+                                style={{ textDecoration: "none" }}
+                              >
+                                {" "}
+                                8595677844
+                              </a>
+                            </span>
                           </Col>
                         </Row>
                       </ListGroup.Item>
+
                       <ListGroup.Item className="bg-gray">
                         <Row>
                           <Col xs={2} sm={2} md={2} className="icon">
@@ -234,20 +224,14 @@ function ProfileSidebar() {
                               <i className="fa-solid fa-envelope"></i>
                             </Button>
                           </Col>
-                          <Col>
-                            <span
-                              className="text-muted"
-                              style={{ fontSize: "13px" }}
-                            >
-                              Email
-                            </span>
+                          <Col xs={10} sm={10} md={10}>
+                            <span className="text-muted resp-text">Email</span>
                             <br />
                             <span style={{ fontSize: "12px" }}>
                               <a
                                 href="mailto:govindchoudhary844@gmail.com"
-                                className="my-email"
+                                className="resp-text"
                                 style={{
-                                  fontSize: "13px",
                                   textDecoration: "none",
                                 }}
                               >
@@ -257,6 +241,7 @@ function ProfileSidebar() {
                           </Col>
                         </Row>
                       </ListGroup.Item>
+
                       <ListGroup.Item className="bg-gray">
                         <Row>
                           <Col xs={2} sm={2} md={2} className="icon">
@@ -264,15 +249,12 @@ function ProfileSidebar() {
                               <i className="fa-solid fa-location-dot"></i>
                             </Button>
                           </Col>
-                          <Col>
-                            <span
-                              className="text-muted"
-                              style={{ fontSize: "13px" }}
-                            >
+                          <Col xs={10} sm={10} md={10}>
+                            <span className="text-muted resp-text">
                               Address
                             </span>
                             <br />
-                            New Delhi, Delhi
+                            <p className="resp-h5">New Delhi, Delhi</p>
                           </Col>
                         </Row>
                       </ListGroup.Item>

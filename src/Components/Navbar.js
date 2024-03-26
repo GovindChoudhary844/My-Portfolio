@@ -21,6 +21,13 @@ const CustomNavbar = () => {
           transform: scale(1.1);
           color: white;
         }
+
+        .sticky-navbar {
+          position: -webkit-sticky; /* For Safari */
+          position: sticky;
+          top: 10px;
+          z-index: 1000; /* Ensure the Navbar is above other content */
+        }
         
         @media (min-width: 575.98px) and (max-width: 1399px) {
           .navbar-col {
@@ -29,13 +36,12 @@ const CustomNavbar = () => {
         }
       `}
       </style>
-      <div className="d-none d-md-block navbar-col">
+      <div className="d-none d-md-block navbar-col sticky-navbar">
         <Navbar
           collapseOnSelect
           expand="lg"
-          bg="light"
           variant="light"
-          className="rounded-3"
+          className="rounded-3 bg-green"
         >
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">

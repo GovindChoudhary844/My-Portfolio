@@ -29,16 +29,22 @@ function App() {
             padding-right: 10%;
           }
           .pages{
-          margin-top: 2em !important;
+            margin-top: 2em !important;
+          }
         }
-
+        @media (max-width: 1399px) {
+          .content{
+            margin-top: 30vh;
+          }
         } 
       `}
       </style>
       <Router>
         <Container fluid className="background-image-container">
-          <Topmenu />
-          <Row className="content  pb-5">
+          <Row>
+            <Topmenu />
+          </Row>
+          <Row className="content pb-5">
             <Col sm={12} md={12} lg={4} xl={4} xxl={3}>
               <ProfileSidebar />
             </Col>
@@ -61,7 +67,7 @@ function App() {
               </Routes>
             </Col>
             {/* ====================== */}
-            <Col sm={12} md={12} xxl={1}>
+            <Col sm={12} md={12} xl={1}>
               <Navbar />
             </Col>
           </Row>

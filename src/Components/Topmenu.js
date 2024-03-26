@@ -1,10 +1,10 @@
-// Topmenu.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function Topmenu() {
   const [menuVisible, setMenuVisible] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
@@ -13,6 +13,23 @@ function Topmenu() {
   const closeMenu = () => {
     setMenuVisible(false);
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > window.innerHeight * 0.3) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
@@ -32,8 +49,6 @@ function Topmenu() {
           display: none; 
         }
         
-        
-
         .name-logo {
           width: 200px;
         }
@@ -64,6 +79,16 @@ function Topmenu() {
           box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
         }
 
+        .top-navbar {
+          transition: background-color 0.5s;
+          ${
+            scrolled
+              ? "background: rgba(255, 255, 255, 0.2); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);"
+              : "background-color: transparent;"
+          }
+        }
+        
+
         @media (max-width: 767.98px) {
           .top-navbar {
             height: 20vh !important;
@@ -71,9 +96,17 @@ function Topmenu() {
           .name-logo {
             width: 150px !important;
           }
-          
         }
+        
         @media (max-width: 1399px) {
+          .top-navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 30px;
+            width: 100%;
+            z-index: 1000;
+          }
           .top-menu-button {
             display: block;
           }
