@@ -146,11 +146,7 @@ function Topmenu() {
               <div className="top-mode-button mx-3">
                 <i className="fa-solid fa-moon-stars fa-2x"></i>
               </div>
-              <div
-                className="top-menu-button"
-                style={{ zIndex: "2000" }}
-                onClick={toggleMenu}
-              >
+              <div className="top-menu-button" onClick={toggleMenu}>
                 <i className="fa-solid fa-bars fa-2x"></i>
               </div>
             </Col>
@@ -161,7 +157,7 @@ function Topmenu() {
           <Container
             fluid
             className="position-fixed"
-            style={{ marginTop: "140px", width: "95%", zIndex: "10" }}
+            style={{ marginTop: "20vh", width: "95%", zIndex: "1010" }}
           >
             <div
               ref={menuRef}
