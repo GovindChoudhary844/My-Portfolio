@@ -39,7 +39,7 @@ function App() {
         <Container fluid className="background-image-container">
           <Topmenu />
           <Row className="content  pb-5">
-            <Col sm={12} md={12} lg={4} xl={3}>
+            <Col sm={12} md={12} lg={4} xl={4} xxl={3}>
               <ProfileSidebar />
             </Col>
             {/* ====================== */}
@@ -48,6 +48,7 @@ function App() {
               md={12}
               lg={8}
               xl={8}
+              xxl={8}
               className="my-5 my-md-0 my-lg-0 pages"
             >
               <Routes>
@@ -60,7 +61,7 @@ function App() {
               </Routes>
             </Col>
             {/* ====================== */}
-            <Col sm={12} md={12} xl={1}>
+            <Col sm={12} md={12} xxl={1}>
               <Navbar />
             </Col>
           </Row>

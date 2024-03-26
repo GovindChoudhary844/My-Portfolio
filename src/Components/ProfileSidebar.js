@@ -89,9 +89,10 @@ function ProfileSidebar() {
           .button-desc{
             background-color: white;
             color: black;
+            border: 1px solid #088F8F;
           }
           .button-desc:hover {
-            background-color: blue;
+            background-color: #088F8F;
             color: white;
           }
 
@@ -104,14 +105,17 @@ function ProfileSidebar() {
               width: 80% !important;
             }
             .my-email{
-              font-size: 13px !important;
+              font-size: 11px !important;
             }
           }
-          p {
+
+          .profile-name {
+            font-family: "Dancing Script", cursive;
+            font-optical-sizing: auto;
             font-weight: 400;
-            font-size: 16px;
-            line-height: 27px;
-        }
+            font-style: normal;
+            font-style: normal;
+          }
           
           /* Styles for screens between 576px and 767.98px (small devices) */
           @media (min-width: 576px) and (max-width: 767.98px) {
@@ -152,7 +156,9 @@ function ProfileSidebar() {
                   className="profile-image rounded-5"
                 />
               </span>
-              <h3 className="text-center my-3">Govind Choudhary</h3>
+              <h3 className="text-center my-3 profile-name resp-h1">
+                Govind Choudhary
+              </h3>
               <span className="d-flex justify-content-center align-items-center">
                 <p
                   className="text-center d-flex justify-content-center align-items-center profile-feild my-3"
@@ -163,7 +169,7 @@ function ProfileSidebar() {
                     height: "35px",
                   }}
                 >
-                  <strong>Web Developer</strong>
+                  <strong className="resp-h5">Web Developer</strong>
                 </p>
               </span>
 
@@ -189,9 +195,9 @@ function ProfileSidebar() {
                   </a>
                 </Col>
               </Row>
-              <Row className="my-3 mt-5 px-md-5">
+              <Row className="my-3 mt-5 px-md-5 px-lg-0">
                 <Col>
-                  <Card className="rounded-5 bg-blue">
+                  <Card className="rounded-5 bg-green">
                     <ListGroup
                       variant="flush"
                       className="rounded-5 profile-sidebar-content"
@@ -236,7 +242,7 @@ function ProfileSidebar() {
                               Email
                             </span>
                             <br />
-                            <span style={{ fontSize: "13px" }}>
+                            <span style={{ fontSize: "12px" }}>
                               <a
                                 href="mailto:govindchoudhary844@gmail.com"
                                 className="my-email"

@@ -13,14 +13,16 @@ const CustomNavbar = () => {
           text-align: center;
           transition: 0.5s;
           margin-bottom: 10px;
-          padding: 15px;
+          padding: 10px;
+          transition: transform 0.2s ease-in-out;
         }
         .navlink-button:hover{
-          background-color: blue;
+          background-color: #088F8F;
+          transform: scale(1.1);
           color: white;
         }
         
-        @media (min-width: 575.98px) and (max-width: 1200px) {
+        @media (min-width: 575.98px) and (max-width: 1399px) {
           .navbar-col {
             display: none !important;
           }

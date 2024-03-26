@@ -18,3 +18,31 @@
 .bg-blue {
   background-color: #0A66C2;
 }
+
+.bg-green {
+  background-color: #088F8F;
+}
+
+.resp-text {
+  font-size: clamp(0.6875rem, 0.5139rem + 0.5556vw, 1rem);
+}
+
+.resp-h1 {
+  font-size: clamp(1.375rem, 0.75rem + 2vw, 2.5rem);
+}
+
+.resp-h2 {
+  font-size: clamp(1.25rem, 0.75rem + 1.5vw, 2rem);
+}
+
+.resp-h3 {
+  font-size: clamp(1.125rem, 0.75rem + 1vw, 1.75rem);
+}
+
+.resp-h4 {
+  font-size: clamp(1rem, 0.75rem + 0.75vw, 1.5rem);
+}
+
+.resp-h5 {
+  font-size: clamp(1rem, 0.75rem + 0.5vw, 1.5rem);
+}
