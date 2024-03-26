@@ -1,10 +1,24 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Container, Row, Col, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function Topmenu() {
   const [menuVisible, setMenuVisible] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const menuRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (menuRef.current && !menuRef.current.contains(event.target)) {
+        setMenuVisible(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [menuRef]);
 
   const toggleMenu = () => {
     setMenuVisible(!menuVisible);
@@ -132,7 +146,11 @@ function Topmenu() {
               <div className="top-mode-button mx-3">
                 <i className="fa-solid fa-moon-stars fa-2x"></i>
               </div>
-              <div className="top-menu-button" onClick={toggleMenu}>
+              <div
+                className="top-menu-button"
+                style={{ zIndex: "2000" }}
+                onClick={toggleMenu}
+              >
                 <i className="fa-solid fa-bars fa-2x"></i>
               </div>
             </Col>
@@ -140,8 +158,13 @@ function Topmenu() {
         </Container>
         {/* menu Item */}
         {menuVisible && (
-          <Container fluid className="position-relative">
+          <Container
+            fluid
+            className="position-fixed"
+            style={{ marginTop: "140px", width: "95%", zIndex: "10" }}
+          >
             <div
+              ref={menuRef}
               className="menu-container"
               style={{ width: "100%", marginLeft: "-12px" }}
             >
