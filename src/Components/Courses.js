@@ -12,7 +12,7 @@ function Courses() {
         `}
       </style>
       <Row className="align-items-center">
-        <Col md={5}>
+        <Col md={5} className="my-3 my-md-0">
           <img
             src="Images/Python_Full_Stack_Developer.png"
             alt=""

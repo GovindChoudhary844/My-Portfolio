@@ -188,10 +188,10 @@ function ProfileSidebar() {
               </Row>
               <Row className="my-3 mt-5 px-md-5 px-lg-0">
                 <Col>
-                  <Card className="rounded-5 bg-green">
+                  <Card className="rounded-2 bg-green">
                     <ListGroup
                       variant="flush"
-                      className="rounded-5 profile-sidebar-content"
+                      className="rounded-2 profile-sidebar-content"
                     >
                       <ListGroup.Item className="bg-gray">
                         <Row>

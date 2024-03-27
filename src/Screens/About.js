@@ -9,23 +9,19 @@ import "../App.css";
 const About = () => {
   return (
     <>
-      <div className="rounded-3 p-5" style={{ backgroundColor: "white" }}>
-        <style>
-          {`
-          .page-title:after {
-            content: "";
-            position: absolute;
-            width: 20vh;
+      <style>
+        {`
+          hr {
             height: 3px;
             background-color: #088F8F;
-            margin-top: 20px;
-            margin-left: 15px;
           }
-
-          
         `}
-        </style>
-        <h1 className="page-title resp-h1">About</h1>
+      </style>
+      <div
+        className="rounded-3 p-4 p-md-5 p-lg-5"
+        style={{ backgroundColor: "white" }}
+      >
+        <h1 className="page-title resp-h1 text-center mt-3">About</h1>
         <span>
           <p className="text-muted resp-text">
             Experienced web developer proficient in HTML, CSS, and Bootstrap.
@@ -37,12 +33,14 @@ const About = () => {
         </span>
 
         <Col>
+          <hr />
           <h2 className="resp-h2 mt-lg-5 mt-md-5 mt-2">Skills</h2>
           <Skills />
         </Col>
 
         <Row>
           <Col className="my-lg-5 my-md-5 my-2">
+            <hr />
             <MarqueImage />
           </Col>
         </Row>

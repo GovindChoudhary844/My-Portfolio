@@ -1,11 +1,12 @@
 // Resume.js
 import React from "react";
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, Button } from "react-bootstrap";
 import Skills from "../Components/Skills";
 import Project1 from "../Components/Projects/Project1";
 import Project2 from "../Components/Projects/Project2";
 import Project3 from "../Components/Projects/Project3";
 import Courses from "../Components/Courses";
+import Education from "../Components/Education";
 import Copyright from "../Components/copyright";
 import "../App.css";
 
@@ -14,15 +15,6 @@ const Resume = () => {
     <>
       <style>
         {`
-          .page-title:after {
-            content: "";
-            position: absolute;
-            width: 20vh;
-            height: 3px;
-            background-color: #088F8F;
-            margin-top: 25px;
-            margin-left: 15px;
-          }
           hr {
             height: 3px;
             background-color: #088F8F;
@@ -43,10 +35,20 @@ const Resume = () => {
             position: relative;
             top: -13px;
           }
+          .bg-green{
+            border: 1px solid #088F8F;
+          }
+          .bg-green:hover{
+            background-color: #017d7d;
+            border: 1px solid #017d7d;
+          }
       `}
       </style>
-      <div className="rounded-3 p-5" style={{ backgroundColor: "white" }}>
-        <h1 className="page-title resp-h1">Resume</h1>
+      <div
+        className="rounded-3 p-4 p-md-5 p-lg-5"
+        style={{ backgroundColor: "white" }}
+      >
+        <h1 className="page-title resp-h1 text-center">Resume</h1>
         <h2 className="mt-5 resp-h2">Profile</h2>
         <hr />
         <p className="resp-text">
@@ -59,12 +61,12 @@ const Resume = () => {
         </p>
 
         <Col>
-          <h2 className="resp-h2 mt-lg-5 mt-md-5 mt-2">Skills</h2>
+          <h2 className="resp-h2 mt-lg-5 mt-md-5 mt-2 text-center">Skills</h2>
           <hr />
           <Skills />
         </Col>
         <Col>
-          <h2 className="resp-h2 mt-lg-5 mt-md-5 mt-2">Projects</h2>
+          <h2 className="resp-h2 mt-lg-5 mt-md-5 mt-2 text-center">Projects</h2>
           <hr />
           <Project1 />
           <hr className="hr-small" />
@@ -73,12 +75,23 @@ const Resume = () => {
           <Project3 />
         </Col>
         <Col>
-          <h2 className="resp-h2 mt-lg-5 mt-md-5 mt-2">Courses</h2>
+          <h2 className="resp-h2 mt-lg-5 mt-md-5 mt-2 text-center">Courses</h2>
           <hr />
           <Courses />
+        </Col>
+        <Col>
+          <h2 className="resp-h2 mt-lg-5 mt-md-5 mt-2 text-center">
+            Education
+          </h2>
+          <hr />
+          <Education />
           <hr />
         </Col>
-
+        <Row className="align-items-center justify-content-center">
+          <Col className="text-center">
+            <Button className="bg-green resp-text">Download</Button>
+          </Col>
+        </Row>
         <Row className="mt-5 d-flex">
           <Copyright />
         </Row>

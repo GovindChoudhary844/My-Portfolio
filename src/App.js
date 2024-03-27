@@ -23,6 +23,12 @@ function App() {
           margin-top: 8%;
         }
 
+        @media (max-width: 767.98px){
+          .content{
+            padding-left: 0;
+            padding-right: 0;
+          }
+        }
         @media (min-width: 768px) and (max-width: 991.98px){
           .content{
             padding-left: 10%;
@@ -34,7 +40,7 @@ function App() {
         }
         @media (max-width: 1399px) {
           .content{
-            margin-top: 30vh;
+            margin-top: 20vh;
           }
         } 
       `}

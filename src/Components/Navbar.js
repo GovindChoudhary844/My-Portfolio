@@ -23,10 +23,10 @@ const CustomNavbar = () => {
         }
 
         .sticky-navbar {
-          position: -webkit-sticky; /* For Safari */
+          position: -webkit-sticky; 
           position: sticky;
           top: 10px;
-          z-index: 1000; /* Ensure the Navbar is above other content */
+          z-index: 1000; 
         }
         
         @media (min-width: 575.98px) and (max-width: 1399px) {
