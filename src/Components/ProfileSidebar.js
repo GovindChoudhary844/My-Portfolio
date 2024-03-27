@@ -160,7 +160,7 @@ function ProfileSidebar() {
                     height: "35px",
                   }}
                 >
-                  <strong className="resp-h5">Web Developer</strong>
+                  <strong className="resp-h6">Web Developer</strong>
                 </p>
               </span>
 
@@ -201,11 +201,13 @@ function ProfileSidebar() {
                             </Button>
                           </Col>
                           <Col xs={10} sm={10} md={10}>
-                            <span className="text-muted resp-text">Phone</span>
+                            <span className="text-muted resp-text-small">
+                              Phone
+                            </span>
                             <br />
                             <span>
                               <a
-                                className="resp-h5"
+                                className="resp-h6"
                                 href="tel:+91 8595677844"
                                 style={{ textDecoration: "none" }}
                               >
@@ -225,12 +227,14 @@ function ProfileSidebar() {
                             </Button>
                           </Col>
                           <Col xs={10} sm={10} md={10}>
-                            <span className="text-muted resp-text">Email</span>
+                            <span className="text-muted resp-text-small">
+                              Email
+                            </span>
                             <br />
                             <span style={{ fontSize: "12px" }}>
                               <a
                                 href="mailto:govindchoudhary844@gmail.com"
-                                className="resp-text"
+                                className="resp-text-small"
                                 style={{
                                   textDecoration: "none",
                                 }}
@@ -250,11 +254,11 @@ function ProfileSidebar() {
                             </Button>
                           </Col>
                           <Col xs={10} sm={10} md={10}>
-                            <span className="text-muted resp-text">
+                            <span className="text-muted resp-text-small">
                               Address
                             </span>
                             <br />
-                            <p className="resp-h5">New Delhi, Delhi</p>
+                            <p className="resp-h6">New Delhi, Delhi</p>
                           </Col>
                         </Row>
                       </ListGroup.Item>

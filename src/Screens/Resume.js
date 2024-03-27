@@ -15,26 +15,7 @@ const Resume = () => {
     <>
       <style>
         {`
-          hr {
-            height: 3px;
-            background-color: #088F8F;
-          }
-
-          .hr-small {
-            border: none;
-            overflow: visible;
-            text-align: center;
-            height: 3px;
-            width: 80%
-          }
           
-          .hr-small::after {
-            background: #fff;
-            content: '§';
-            padding: 0 4px;
-            position: relative;
-            top: -13px;
-          }
           .bg-green{
             border: 1px solid #088F8F;
           }

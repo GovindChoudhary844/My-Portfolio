@@ -11,6 +11,7 @@ import Resume from "./Screens/Resume";
 import Works from "./Screens/Works";
 import Blogs from "./Screens/Blogs";
 import Contact from "./Screens/Contact";
+import Projects1Screen from "./Screens/ProjectsScreen/Project1/Projects1Screen";
 
 function App() {
   return (
@@ -70,6 +71,7 @@ function App() {
                 <Route path="/works" element={<Works />} />
                 <Route path="/blogs" element={<Blogs />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="/Flower-Shop" element={<Projects1Screen />} />
               </Routes>
             </Col>
             {/* ====================== */}

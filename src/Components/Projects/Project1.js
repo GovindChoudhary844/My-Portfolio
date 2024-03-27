@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { Nav } from "react-bootstrap";
 import "../../App.css";
 
 function Project1() {
@@ -11,7 +13,9 @@ function Project1() {
         }
         `}
       </style>
-      <h5 className="resp-h5">Flower Shop (12/2023 – 02/2024)</h5>
+      <Nav.Link as={Link} to="/Flower-Shop">
+        <h5 className="resp-h5">Flower Shop (12/2023 – 02/2024)</h5>
+      </Nav.Link>
       <p className="text-muted italic resp-text">
         Responsive Django and React.js Flower Shop
       </p>

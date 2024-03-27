@@ -1,11 +1,12 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Container, Row, Col, Nav } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 function Topmenu() {
   const [menuVisible, setMenuVisible] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const menuRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -44,6 +45,15 @@ function Topmenu() {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+  const scrollToAboutSection = () => {
+    navigate("/about");
+    setTimeout(() => {
+      const aboutSection = document.getElementById("about-section");
+      aboutSection.scrollIntoView({ behavior: "smooth" });
+    }, 100);
+    closeMenu();
+  };
 
   return (
     <>
