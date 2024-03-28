@@ -1,12 +1,29 @@
 // Works.js
 import React from "react";
+import { Col, Row, Button } from "react-bootstrap";
+import Copyright from "../Components/copyright";
+import "../App.css";
 
-function Works() {
+const Works = () => {
   return (
-    <div>
-      <h1>Works</h1>
-    </div>
+    <>
+      <style>
+        {`
+          
+      `}
+      </style>
+      <div
+        className="rounded-3 p-4 p-md-5 p-lg-5"
+        style={{ backgroundColor: "white" }}
+      >
+        <h1 className="page-title resp-h1 text-center">Works</h1>
+
+        <Row className="mt-5 d-flex">
+          <Copyright />
+        </Row>
+      </div>
+    </>
   );
-}
+};
 
 export default Works;
